@@ -1,8 +1,11 @@
 import { Button } from './ui/button';
-import { ArrowRight, Shield, Zap } from 'lucide-react';
-import heroFamily from '@/assets/hero-family.webp';
+import { ArrowRight, Shield, Zap, Play } from 'lucide-react';
+import { useState } from 'react';
 
 const HeroSection = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const videoId = 'aPk6FUIHnSs';
+
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
       {/* Geometric Pattern Background */}
@@ -16,18 +19,58 @@ const HeroSection = () => {
       <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-primary animate-float opacity-60" />
       <div className="absolute bottom-1/3 left-1/5 w-3 h-3 rounded-full bg-primary/50 animate-float animation-delay-200" />
 
-      {/* Hero Image - Right Side (Desktop Only) */}
-      <div 
-        className="absolute top-0 right-0 bottom-0 w-1/2 hidden lg:block"
-        style={{ 
-          clipPath: 'polygon(20% 0, 100% 0, 100% 100%, 0 100%)'
-        }}
-      >
-        <img 
-          src={heroFamily}
-          alt="Família feliz na praia"
-          className="w-full h-full object-cover object-left-top animate-fade-up animation-delay-200"
-        />
+      {/* Premium Video - Right Side (Desktop Only) */}
+      <div className="absolute top-1/2 right-8 xl:right-16 2xl:right-24 -translate-y-1/2 hidden lg:block z-20 animate-fade-up animation-delay-200">
+        {/* Premium Frame Container */}
+        <div className="relative">
+          {/* Outer Glow */}
+          <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 rounded-3xl blur-xl" />
+          
+          {/* Gold Border Frame */}
+          <div className="relative p-1 rounded-2xl bg-gradient-to-br from-primary via-primary/80 to-primary/60 shadow-2xl">
+            {/* Inner Dark Frame */}
+            <div className="p-1 rounded-xl bg-background/95">
+              {/* Video Container */}
+              <div className="relative w-[400px] xl:w-[480px] 2xl:w-[560px] aspect-video rounded-lg overflow-hidden bg-background">
+                {!isVideoLoaded ? (
+                  <button
+                    onClick={() => setIsVideoLoaded(true)}
+                    className="absolute inset-0 group cursor-pointer"
+                    aria-label="Reproduzir vídeo"
+                  >
+                    {/* Thumbnail */}
+                    <img
+                      src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                      alt="Thumbnail do vídeo"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    {/* Play Button Overlay */}
+                    <div className="absolute inset-0 bg-background/20 flex items-center justify-center transition-all duration-300 group-hover:bg-background/10">
+                      <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                        <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
+                      </div>
+                    </div>
+                  </button>
+                ) : (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+                    title="Vídeo Institucional"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                )}
+              </div>
+            </div>
+          </div>
+          
+          {/* Decorative Corner Elements */}
+          <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-primary/60 rounded-tl-lg" />
+          <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-primary/60 rounded-tr-lg" />
+          <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-primary/60 rounded-bl-lg" />
+          <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-primary/60 rounded-br-lg" />
+        </div>
       </div>
 
       <div className="container relative z-10">
