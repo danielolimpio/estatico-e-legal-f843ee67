@@ -41,7 +41,9 @@ const Header = () => {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
           <Button variant="ghost" size="sm">Entrar</Button>
-          <Button variant="default" size="sm">Começar Agora</Button>
+          <Button variant="default" size="sm" asChild>
+            <a href="https://backoffice.aurum.foundation/u/5CW428" target="_blank" rel="noopener noreferrer">Começar Agora</a>
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -71,7 +73,9 @@ const Header = () => {
             ))}
             <li className="pt-4 flex flex-col gap-2">
               <Button variant="outline" className="w-full">Entrar</Button>
-              <Button variant="default" className="w-full">Começar Agora</Button>
+              <Button variant="default" className="w-full" asChild>
+                <a href="https://backoffice.aurum.foundation/u/5CW428" target="_blank" rel="noopener noreferrer">Começar Agora</a>
+              </Button>
             </li>
           </ul>
         </div>
