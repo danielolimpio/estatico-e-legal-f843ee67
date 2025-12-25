@@ -20,18 +20,18 @@ const HeroSection = () => {
       <div className="absolute bottom-1/3 left-1/5 w-3 h-3 rounded-full bg-primary/50 animate-float animation-delay-200" />
 
       {/* Premium Video - Right Side (Desktop Only) */}
-      <div className="absolute top-1/2 right-8 xl:right-16 2xl:right-24 -translate-y-1/2 hidden lg:block z-20 animate-fade-up animation-delay-200">
+      <div className="absolute top-1/2 -translate-y-1/2 right-[5%] xl:right-[8%] 2xl:right-[10%] hidden lg:flex items-center z-20 animate-fade-up animation-delay-200">
         {/* Premium Frame Container */}
         <div className="relative">
           {/* Outer Glow */}
-          <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 rounded-3xl blur-xl" />
+          <div className="absolute -inset-6 bg-gradient-to-r from-primary/30 via-primary/15 to-primary/30 rounded-3xl blur-2xl" />
           
-          {/* Gold Border Frame */}
-          <div className="relative p-1 rounded-2xl bg-gradient-to-br from-primary via-primary/80 to-primary/60 shadow-2xl">
-            {/* Inner Dark Frame */}
-            <div className="p-1 rounded-xl bg-background/95">
-              {/* Video Container */}
-              <div className="relative w-[400px] xl:w-[480px] 2xl:w-[560px] aspect-video rounded-lg overflow-hidden bg-background">
+          {/* Premium Border Frame */}
+          <div className="relative p-[3px] rounded-2xl bg-gradient-to-br from-primary via-primary/70 to-primary/50 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)]">
+            {/* Inner Frame */}
+            <div className="p-[2px] rounded-[14px] bg-background">
+              {/* Video Container - Responsive sizes */}
+              <div className="relative w-[480px] lg:w-[420px] xl:w-[520px] 2xl:w-[640px] 3xl:w-[720px] aspect-video rounded-xl overflow-hidden bg-muted">
                 {!isVideoLoaded ? (
                   <button
                     onClick={() => setIsVideoLoaded(true)}
@@ -46,9 +46,9 @@ const HeroSection = () => {
                       loading="lazy"
                     />
                     {/* Play Button Overlay */}
-                    <div className="absolute inset-0 bg-background/20 flex items-center justify-center transition-all duration-300 group-hover:bg-background/10">
-                      <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
-                        <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
+                    <div className="absolute inset-0 bg-background/30 flex items-center justify-center transition-all duration-300 group-hover:bg-background/10">
+                      <div className="w-16 h-16 xl:w-20 xl:h-20 rounded-full bg-primary flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-primary/50 group-hover:shadow-2xl">
+                        <Play className="w-6 h-6 xl:w-8 xl:h-8 text-primary-foreground ml-1" fill="currentColor" />
                       </div>
                     </div>
                   </button>
@@ -66,10 +66,10 @@ const HeroSection = () => {
           </div>
           
           {/* Decorative Corner Elements */}
-          <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-primary/60 rounded-tl-lg" />
-          <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-primary/60 rounded-tr-lg" />
-          <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-primary/60 rounded-bl-lg" />
-          <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-primary/60 rounded-br-lg" />
+          <div className="absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-primary/50 rounded-tl-xl" />
+          <div className="absolute -top-3 -right-3 w-8 h-8 border-t-2 border-r-2 border-primary/50 rounded-tr-xl" />
+          <div className="absolute -bottom-3 -left-3 w-8 h-8 border-b-2 border-l-2 border-primary/50 rounded-bl-xl" />
+          <div className="absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-primary/50 rounded-br-xl" />
         </div>
       </div>
 
