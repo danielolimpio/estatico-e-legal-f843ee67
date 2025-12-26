@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Shield, TrendingUp, Target, Bot, Coins, BarChart3, CreditCard, Users, Building, Mail, MapPin, FileText } from 'lucide-react';
 import bryanBenson from '@/assets/bryan-benson.png';
 import aiBlockchain from '@/assets/ai-blockchain.webp';
+import heroAboutBg from '@/assets/hero-about-bg.webp';
 
 const SobreNos = () => {
   const ecosystemFeatures = [
@@ -50,20 +51,24 @@ const SobreNos = () => {
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-hero opacity-5" />
-          <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
-          <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-accent/10 blur-3xl" />
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroAboutBg})` }}
+          />
+          {/* Dark Overlay for text contrast */}
+          <div className="absolute inset-0 bg-foreground/70" />
           
           <div className="container relative z-10">
             <div className="max-w-4xl mx-auto text-center animate-fade-up">
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6">
+              <span className="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary font-medium text-sm mb-6 backdrop-blur-sm">
                 SOBRE A AURUM
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-background">
                 Um ecossistema financeiro{' '}
                 <span className="text-gradient">abrangente</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-background/80 leading-relaxed max-w-3xl mx-auto">
                 A Aurum é um ecossistema financeiro abrangente, projetado para empoderar usuários com ferramentas inovadoras para ganhar e gerenciar ativos digitais.
               </p>
             </div>
