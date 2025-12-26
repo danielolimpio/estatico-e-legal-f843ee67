@@ -1,6 +1,7 @@
 import SEOHead from '@/components/SEOHead';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import VideoSection from '@/components/VideoSection';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { 
@@ -202,6 +203,9 @@ const Servicos = () => {
             </div>
           </div>
         </section>
+
+        {/* Video Section */}
+        <VideoSection videoId="ufWvv1I320I" size="large" />
 
         {/* Services Grid */}
         <section className="py-20 bg-muted/30">
