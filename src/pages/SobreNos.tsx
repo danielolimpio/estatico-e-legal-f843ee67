@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Shield, TrendingUp, Target, Bot, Coins, BarChart3, CreditCard, Users, Building, Mail, MapPin, FileText } from 'lucide-react';
 import bryanBenson from '@/assets/bryan-benson.png';
+import aiBlockchain from '@/assets/ai-blockchain.webp';
 
 const SobreNos = () => {
   const ecosystemFeatures = [
@@ -111,19 +112,12 @@ const SobreNos = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="relative animate-fade-up animation-delay-200">
-                  <div className="aspect-square rounded-3xl bg-gradient-hero p-1">
-                    <div className="w-full h-full rounded-3xl bg-background flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
-                          <Shield className="w-12 h-12 text-primary" />
-                        </div>
-                        <h3 className="text-2xl font-display font-bold mb-2">Segurança</h3>
-                        <p className="text-muted-foreground">Eficiência</p>
-                        <p className="text-muted-foreground">Escala</p>
-                      </div>
-                    </div>
-                  </div>
+                <div className="relative animate-fade-up animation-delay-200 flex items-center justify-center">
+                  <img 
+                    src={aiBlockchain} 
+                    alt="Tecnologia AI e Blockchain - Segurança Aurum"
+                    className="w-full max-w-md object-contain drop-shadow-2xl"
+                  />
                 </div>
               </div>
             </div>
