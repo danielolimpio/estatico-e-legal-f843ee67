@@ -239,11 +239,11 @@ const Servicos = () => {
                       </p>
                       
                       <div className="mt-auto">
-                        <div className={`inline-flex flex-col px-4 py-3 rounded-xl bg-gradient-to-br ${service.gradient} bg-opacity-10`}>
-                          <span className="text-2xl font-display font-bold text-foreground">
+                        <div className={`inline-flex flex-col px-4 py-3 rounded-xl bg-gradient-to-br ${service.gradient}`}>
+                          <span className="text-2xl font-display font-bold text-white">
                             {service.highlight}
                           </span>
-                          <span className="text-xs text-muted-foreground">
+                          <span className="text-xs text-white/80">
                             {service.highlightSubtext}
                           </span>
                         </div>
@@ -271,8 +271,8 @@ const Servicos = () => {
                               key={idx}
                               className="flex items-start gap-3 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors"
                             >
-                              <div className={`p-2 rounded-lg bg-gradient-to-br ${service.gradient} bg-opacity-20`}>
-                                <feature.icon className="h-4 w-4 text-primary" />
+                              <div className={`p-2 rounded-lg bg-gradient-to-br ${service.gradient}`}>
+                                <feature.icon className="h-4 w-4 text-white" />
                               </div>
                               <span className="text-sm text-foreground leading-snug">
                                 {feature.text}
