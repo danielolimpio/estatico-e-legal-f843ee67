@@ -12,6 +12,10 @@ import Cartoes from "./pages/Cartoes";
 import Exchange from "./pages/Exchange";
 import Plataforma from "./pages/Plataforma";
 import Seguranca from "./pages/Seguranca";
+import Blog from "./pages/Blog";
+import Documentacao from "./pages/Documentacao";
+import FAQ from "./pages/FAQ";
+import Suporte from "./pages/Suporte";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +36,10 @@ const App = () => (
             <Route path="/exchange" element={<Exchange />} />
             <Route path="/plataforma" element={<Plataforma />} />
             <Route path="/seguranca" element={<Seguranca />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/documentacao" element={<Documentacao />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/suporte" element={<Suporte />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
