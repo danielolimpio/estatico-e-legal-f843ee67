@@ -9,6 +9,7 @@ const footerLinks = {
     { label: 'Sobre Nós', href: '/sobre-nos' },
     { label: 'Serviços', href: '/servicos' },
     { label: 'Contato', href: '/contato' },
+    { label: 'Sitemap', href: '/sitemap' },
   ],
   recursos: [
     { label: 'Blog', href: '/blog' },

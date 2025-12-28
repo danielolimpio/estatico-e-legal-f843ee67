@@ -29,7 +29,7 @@ const Header = () => {
             <li key={link.href}>
               <a 
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative group"
+                className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -39,9 +39,9 @@ const Header = () => {
         </ul>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm">Entrar</Button>
-          <Button variant="default" size="sm" asChild>
+        <div className="hidden md:flex items-center gap-4">
+          <Button variant="ghost" size="default" className="text-base">Entrar</Button>
+          <Button variant="default" size="default" className="text-base" asChild>
             <a href="https://backoffice.aurum.foundation/u/5CW428" target="_blank" rel="noopener noreferrer">Começar Agora</a>
           </Button>
         </div>
