@@ -1,3 +1,5 @@
+import logoAurum from '@/assets/logo-aurum.png';
+
 const footerLinks = {
   produto: [
     { label: 'Plataforma', href: '/plataforma' },
@@ -32,11 +34,8 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-background/10">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <a href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-lg">A</span>
-              </div>
-              <span className="font-display font-bold text-xl">AURUM</span>
+            <a href="/" className="mb-4 inline-block">
+              <img src={logoAurum} alt="Aurum" className="h-8 w-auto brightness-0 invert" />
             </a>
             <p className="text-sm text-background/60 leading-relaxed">
               Tecnologia financeira de última geração para investidores modernos.
