@@ -38,10 +38,16 @@ const VideoSection = ({ videoId, size = 'normal' }: VideoSectionProps) => {
                     >
                       {/* Thumbnail */}
                       <img
-                        src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                        src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
                         alt="Thumbnail do vídeo"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          if (!target.src.includes('hqdefault')) {
+                            target.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                          }
+                        }}
                       />
                       {/* Play Button Overlay */}
                       <div className="absolute inset-0 bg-background/30 flex items-center justify-center transition-all duration-300 group-hover:bg-background/10">
