@@ -1,7 +1,8 @@
+import type React from 'react';
 import { ViteReactSSG } from 'vite-react-ssg';
 import type { RouteRecord } from 'vite-react-ssg';
-import pkg from 'react-helmet-async';
-const { HelmetProvider } = pkg;
+import * as HelmetAsync from 'react-helmet-async';
+const HelmetProvider = (HelmetAsync as any).HelmetProvider as React.ComponentType<React.PropsWithChildren>;
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { Toaster } from '@/components/ui/toaster';
 import { Toaster as Sonner } from '@/components/ui/sonner';
