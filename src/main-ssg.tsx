@@ -1,6 +1,7 @@
 import { ViteReactSSG } from 'vite-react-ssg';
 import type { RouteRecord } from 'vite-react-ssg';
-import { HelmetProvider } from 'react-helmet-async';
+import pkg from 'react-helmet-async';
+const { HelmetProvider } = pkg;
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { Toaster } from '@/components/ui/toaster';
 import { Toaster as Sonner } from '@/components/ui/sonner';
