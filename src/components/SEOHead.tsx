@@ -1,9 +1,9 @@
 import type React from 'react';
+import * as HelmetAsync from 'react-helmet-async';
 
-// NOTE: During SSG build (Node ESM), react-helmet-async can be resolved as CommonJS.
-// Importing named exports may break the build, so we import the default package.
-import pkg from 'react-helmet-async';
-const { Helmet } = pkg as unknown as { Helmet: React.ComponentType<React.PropsWithChildren> };
+// Use namespace import to be compatible with both ESM bundling (Vite/Rollup)
+// and Node ESM execution during SSG.
+const Helmet = (HelmetAsync as any).Helmet as React.ComponentType<React.PropsWithChildren>;
 
 interface SEOHeadProps {
   title: string;
