@@ -15,14 +15,14 @@ const footerLinks = {
   ],
   recursos: [
     { label: 'Blog', href: '/blog' },
-    { label: 'Documentação', href: '/docs' },
+    { label: 'Documentação', href: '/documentacao' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Suporte', href: '/suporte' },
   ],
   legal: [
-    { label: 'Termos de Uso', href: '/termos' },
-    { label: 'Privacidade', href: '/privacidade' },
-    { label: 'Cookies', href: '/cookies' },
+    { label: 'Termos de Uso', href: '/termos-de-uso' },
+    { label: 'Privacidade', href: '/politica-de-privacidade' },
+    { label: 'Cookies', href: '/politica-de-cookies' },
   ],
 };
 
