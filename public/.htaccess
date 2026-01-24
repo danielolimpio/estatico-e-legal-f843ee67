@@ -1,26 +1,9 @@
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
+RewriteEngine On
+RewriteBase /
 
-  # 1. Se a URL não tem extensão, tenta adicionar .html
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME}.html -f
-  RewriteRule ^(.*)$ $1.html [L]
-
-  # 2. Fallback para SPA - só se .html também não existe
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
-</IfModule>
-
-# Garantir Content-Type correto para HTML
-<IfModule mod_mime.c>
-  AddType text/html .html
-</IfModule>
-
-# Cache para arquivos estáticos
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType text/html "access plus 1 hour"
+# Se não for arquivo nem diretório, redireciona para index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
 </IfModule>
