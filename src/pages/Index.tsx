@@ -14,7 +14,7 @@ const Index = () => {
       <SEOHead 
         title="Aurum | Gestão Inteligente de Ativos Digitais"
         description="Plataforma segura de gestão patrimonial com IA e blockchain. Invista com inteligência e segurança institucional."
-        canonicalUrl="https://aurumfoundation.world"
+        canonicalUrl="https://aurum.app/"
         keywords="gestão de ativos, investimentos, blockchain, fintech, inteligência artificial"
       />
       
