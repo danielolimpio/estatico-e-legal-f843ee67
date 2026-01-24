@@ -1,0 +1,213 @@
+:root {
+:  color-scheme: dark;
+:  --bg: #0a0e17;
+:  --panel: rgba(255, 255, 255, 0.06);
+:  --panel-2: rgba(255, 255, 255, 0.04);
+:  --border: rgba(255, 255, 255, 0.10);
+:  --text: rgba(255, 255, 255, 0.92);
+:  --muted: rgba(255, 255, 255, 0.70);
+:  --muted-2: rgba(255, 255, 255, 0.55);
+:  --primary: #3b82f6;
+:  --primary-2: rgba(59, 130, 246, 0.18);
+:  --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+:  --radius: 18px;
+:  --max: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body.seo-body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background:
+    radial-gradient(900px 600px at 15% 10%, rgba(59, 130, 246, 0.18), transparent 55%),
+    radial-gradient(700px 500px at 85% 20%, rgba(59, 130, 246, 0.10), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 35%),
+    var(--bg);
+  color: var(--text);
+}
+
+/* Layout shell */
+.seo-shell {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px 18px 56px;
+}
+
+/* Top bar */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(14px);
+  background: rgba(10, 14, 23, 0.62);
+  border-bottom: 1px solid var(--border);
+}
+
+header nav {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+header nav a:hover {
+  color: var(--text);
+  background: var(--panel);
+  border-color: var(--border);
+}
+
+/* Main content card */
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px 18px 0;
+}
+
+main > h1 {
+  letter-spacing: -0.02em;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.08;
+  margin: 14px 0 10px;
+}
+
+main > p > strong {
+  display: inline-block;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+section {
+  margin: 18px 0;
+  padding: 18px 18px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+section h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+
+section h3 {
+  margin: 14px 0 8px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+p, li {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+ul, ol { padding-left: 18px; }
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+/* Override legacy inline table row backgrounds used in some pages */
+tr[style*="background"] {
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+th[style], td[style] {
+  border-color: var(--border) !important;
+  color: var(--muted) !important;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  color: var(--muted);
+}
+
+th {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Forms */
+input, select, textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: rgba(59, 130, 246, 0.55);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.16);
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  max-width: var(--max);
+  margin: 34px auto 0;
+  padding: 22px 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted-2);
+}
+
+footer nav a {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+footer nav a:hover { color: var(--text); }
+
+/* Helpers */
+.seo-note {
+  color: var(--muted-2);
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  header nav { justify-content: center; }
+  section { padding: 16px; }
+}
