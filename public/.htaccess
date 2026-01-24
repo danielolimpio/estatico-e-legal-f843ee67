@@ -2,29 +2,8 @@
 RewriteEngine On
 RewriteBase /
 
-# Remover barra final das URLs (exceto raiz)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^ %1 [R=301,L]
-
-# Servir arquivos .html sem extensão
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html [L]
-
-# Se não for arquivo nem diretório, redireciona para index.html (SPA fallback)
+# Se não for arquivo nem diretório, redireciona para index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
-</IfModule>
-
-# Prevent directory listing
-Options -Indexes
-
-# Set correct MIME types
-<IfModule mod_mime.c>
-AddType text/html .html
-AddType application/javascript .js
-AddType text/css .css
 </IfModule>
