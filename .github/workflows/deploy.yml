@@ -20,10 +20,8 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Build do projeto (SSG)
+      - name: Build do projeto
         run: npm run build
-        env:
-          NODE_ENV: production
 
       - name: Mostrar arquivos gerados
         run: ls -la dist/
