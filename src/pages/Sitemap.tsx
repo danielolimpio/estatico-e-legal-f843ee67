@@ -6,26 +6,26 @@ import { Map, Home, Building2, Briefcase, Phone, CreditCard, Globe, Shield, Book
 const sitemapData = {
   principal: [
     { label: 'Página Inicial', href: '/', icon: Home, description: 'Página principal da Aurum Foundation' },
-    { label: 'Sobre Nós', href: '/sobre-nos/', icon: Building2, description: 'Conheça nossa história e missão' },
-    { label: 'Serviços', href: '/servicos/', icon: Briefcase, description: 'Nossos serviços financeiros' },
-    { label: 'Contato', href: '/contato/', icon: Phone, description: 'Entre em contato conosco' },
+    { label: 'Sobre Nós', href: '/sobre-nos', icon: Building2, description: 'Conheça nossa história e missão' },
+    { label: 'Serviços', href: '/servicos', icon: Briefcase, description: 'Nossos serviços financeiros' },
+    { label: 'Contato', href: '/contato', icon: Phone, description: 'Entre em contato conosco' },
   ],
   produtos: [
-    { label: 'Plataforma', href: '/plataforma/', icon: Globe, description: 'Nossa plataforma de investimentos' },
-    { label: 'Cartões', href: '/cartoes/', icon: CreditCard, description: 'Cartões Aurum com benefícios exclusivos' },
-    { label: 'Exchange', href: '/exchange/', icon: Globe, description: 'Compra e venda de criptomoedas' },
-    { label: 'Segurança', href: '/seguranca/', icon: Shield, description: 'Como protegemos seus dados' },
+    { label: 'Plataforma', href: '/plataforma', icon: Globe, description: 'Nossa plataforma de investimentos' },
+    { label: 'Cartões', href: '/cartoes', icon: CreditCard, description: 'Cartões Aurum com benefícios exclusivos' },
+    { label: 'Exchange', href: '/exchange', icon: Globe, description: 'Compra e venda de criptomoedas' },
+    { label: 'Segurança', href: '/seguranca', icon: Shield, description: 'Como protegemos seus dados' },
   ],
   recursos: [
-    { label: 'Blog', href: '/blog/', icon: BookOpen, description: 'Artigos e novidades do mercado' },
-    { label: 'Documentação', href: '/documentacao/', icon: FileText, description: 'Documentação do ecossistema' },
-    { label: 'FAQ', href: '/faq/', icon: HelpCircle, description: 'Perguntas frequentes' },
-    { label: 'Suporte', href: '/suporte/', icon: Headphones, description: 'Atendimento ao cliente' },
+    { label: 'Blog', href: '/blog', icon: BookOpen, description: 'Artigos e novidades do mercado' },
+    { label: 'Documentação', href: '/documentacao', icon: FileText, description: 'Documentação do ecossistema' },
+    { label: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Perguntas frequentes' },
+    { label: 'Suporte', href: '/suporte', icon: Headphones, description: 'Atendimento ao cliente' },
   ],
   legal: [
-    { label: 'Termos de Uso', href: '/termos-de-uso/', icon: Scale, description: 'Termos e condições de uso' },
-    { label: 'Política de Privacidade', href: '/politica-de-privacidade/', icon: Lock, description: 'Como tratamos seus dados' },
-    { label: 'Política de Cookies', href: '/politica-de-cookies/', icon: Cookie, description: 'Uso de cookies no site' },
+    { label: 'Termos de Uso', href: '/termos-de-uso', icon: Scale, description: 'Termos e condições de uso' },
+    { label: 'Política de Privacidade', href: '/politica-de-privacidade', icon: Lock, description: 'Como tratamos seus dados' },
+    { label: 'Política de Cookies', href: '/politica-de-cookies', icon: Cookie, description: 'Uso de cookies no site' },
   ],
 };
 
@@ -35,7 +35,7 @@ const Sitemap = () => {
       <SEOHead
         title="Sitemap - Aurum Foundation"
         description="Navegue por todas as páginas do site da Aurum Foundation. Encontre facilmente informações sobre nossos produtos, serviços e recursos."
-        canonicalUrl="https://aurum.foundation/sitemap/"
+        canonicalUrl="https://aurumfoundation.world/sitemap"
       />
       <Header />
       <main className="min-h-screen bg-background">
