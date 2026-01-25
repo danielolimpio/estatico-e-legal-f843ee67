@@ -12,7 +12,32 @@
   <meta property="og:url" content="https://aurumfoundation.world/contato">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/jpeg" href="/favicon.jpg">
-  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            border: "hsl(220 13% 91%)",
+            background: "hsl(0 0% 100%)",
+            foreground: "hsl(220 20% 10%)",
+            primary: { DEFAULT: "hsl(217 91% 60%)", foreground: "hsl(0 0% 100%)" },
+            secondary: { DEFAULT: "hsl(220 14% 96%)", foreground: "hsl(220 20% 10%)" },
+            muted: { DEFAULT: "hsl(220 14% 96%)", foreground: "hsl(220 10% 46%)" },
+            accent: { DEFAULT: "hsl(217 100% 55%)", foreground: "hsl(0 0% 100%)" },
+          },
+          fontFamily: { display: ['Space Grotesk', 'sans-serif'], body: ['Inter', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: Inter, sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+  </style>
 </head>
 <body class="min-h-screen bg-background font-sans antialiased">
   <!-- Header -->
