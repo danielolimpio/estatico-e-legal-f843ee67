@@ -1,99 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aurumfoundation.world</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://aurum.app/</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aurumfoundation.world/sobre-nos</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://aurum.app/sobre-nos/</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurumfoundation.world/servicos</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://aurum.app/servicos/</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurumfoundation.world/contato</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://aurum.app/contato/</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/plataforma</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/cartoes</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/exchange</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/seguranca</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/blog</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/documentacao</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/faq</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/suporte</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/termos-de-uso</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/politica-de-privacidade</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/politica-de-cookies</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://aurumfoundation.world/sitemap</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>

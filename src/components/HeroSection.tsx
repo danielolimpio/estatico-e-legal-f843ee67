@@ -20,7 +20,7 @@ const HeroSection = () => {
       <div className="absolute bottom-1/3 left-1/5 w-3 h-3 rounded-full bg-primary/50 animate-float animation-delay-200" />
 
       {/* Premium Video - Right Side (Desktop Only) */}
-      <div className="absolute top-1/2 -translate-y-1/2 -mt-12 xl:-mt-16 right-[5%] xl:right-[8%] 2xl:right-[10%] hidden lg:flex items-center z-20 animate-fade-up animation-delay-200">
+      <div className="absolute top-1/2 -translate-y-1/2 right-[5%] xl:right-[8%] 2xl:right-[10%] hidden lg:flex items-center z-20 animate-fade-up animation-delay-200">
         {/* Premium Frame Container */}
         <div className="relative">
           {/* Outer Glow */}

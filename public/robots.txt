@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://aurumfoundation.world/sitemap.xml
+Sitemap: https://aurum.app/sitemap.xml

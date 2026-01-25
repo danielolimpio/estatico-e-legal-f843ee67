@@ -1,24 +1,26 @@
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { Menu, X } from 'lucide-react';
-import logoAurum from '@/assets/logo-aurum.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
     { href: '/', label: 'Início' },
-    { href: '/sobre-nos', label: 'Sobre Nós' },
-    { href: '/servicos', label: 'Serviços' },
-    { href: '/contato', label: 'Contato' },
+    { href: '/sobre-nos/', label: 'Sobre Nós' },
+    { href: '/servicos/', label: 'Serviços' },
+    { href: '/contato/', label: 'Contato' },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <nav className="container mx-auto flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <a href="/" aria-label="Aurum - Página Inicial">
-          <img src={logoAurum} alt="Aurum" className="h-8 md:h-10 w-auto" />
+        <a href="/" className="flex items-center gap-2" aria-label="Aurum - Página Inicial">
+          <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
+            <span className="text-primary-foreground font-display font-bold text-lg">A</span>
+          </div>
+          <span className="font-display font-bold text-xl text-foreground">AURUM</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -27,7 +29,7 @@ const Header = () => {
             <li key={link.href}>
               <a 
                 href={link.href}
-                className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative group"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -37,9 +39,9 @@ const Header = () => {
         </ul>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost" size="default" className="text-base">Entrar</Button>
-          <Button variant="default" size="default" className="text-base" asChild>
+        <div className="hidden md:flex items-center gap-3">
+          <Button variant="ghost" size="sm">Entrar</Button>
+          <Button variant="default" size="sm" asChild>
             <a href="https://backoffice.aurum.foundation/u/5CW428" target="_blank" rel="noopener noreferrer">Começar Agora</a>
           </Button>
         </div>

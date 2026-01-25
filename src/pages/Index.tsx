@@ -4,8 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import StatsSection from '@/components/StatsSection';
 import CTASection from '@/components/CTASection';
-import CardsSection from '@/components/CardsSection';
-import VideoSection from '@/components/VideoSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -24,8 +22,6 @@ const Index = () => {
         <FeaturesSection />
         <StatsSection />
         <CTASection />
-        <VideoSection videoId="aYt4c8CON6c" />
-        <CardsSection />
         <Footer />
       </main>
     </>
