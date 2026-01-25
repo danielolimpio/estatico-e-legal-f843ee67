@@ -15,10 +15,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  ssgOptions: {
-    script: 'async',
-    formatting: 'minify',
-    crittersOptions: false,
-    entry: './src/main-ssg.tsx',
-  },
 }));

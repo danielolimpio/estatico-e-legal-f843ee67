@@ -1,4 +1,4 @@
-name: Deploy Static Site via FTP na Hostinger
+name: Deploy Lovable via FTP na Hostinger
 
 on:
   push:
@@ -6,18 +6,25 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Clonar o repositório
         uses: actions/checkout@v3
 
-      - name: Mostrar arquivos estáticos
-        run: |
-          echo "=== Estrutura do diretório public/static ==="
-          ls -la public/static/ || echo "Pasta static não existe"
-          echo "=== Arquivos HTML ==="
-          find public/static -name "*.html" 2>/dev/null || echo "Nenhum HTML encontrado"
+      - name: Configurar Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Build do projeto
+        run: npm run build
+
+      - name: Mostrar arquivos gerados
+        run: ls -la dist/
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -26,7 +33,7 @@ jobs:
           port: 21
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: ./public/
+          local-dir: ./dist/
           server-dir: /
           dangerous-clean-slate: true
           dry-run: false

@@ -1,41 +1,9 @@
-# Force HTTPS
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
+RewriteEngine On
+RewriteBase /
 
-  # HTTPS redirect
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-  # Remove trailing slashes (301 redirect)
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)/$ /$1 [L,R=301]
-
-  # Serve .html files for URLs without extension
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{DOCUMENT_ROOT}/static/%{REQUEST_URI}.html -f
-  RewriteRule ^(.*)$ /static/$1.html [L]
-
-  # Root to static/index.html
-  RewriteCond %{REQUEST_URI} ^/$
-  RewriteRule ^$ /static/index.html [L]
-</IfModule>
-
-# Error documents
-ErrorDocument 404 /static/404.html
-
-# Headers corretos para SEO
-<IfModule mod_mime.c>
-  AddType text/html .html
-</IfModule>
-
-# Cache para arquivos estáticos
-<IfModule mod_headers.c>
-  <FilesMatch "\.(html)$">
-    Header set Cache-Control "public, max-age=3600"
-  </FilesMatch>
-  <FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|webp|woff|woff2)$">
-    Header set Cache-Control "public, max-age=31536000, immutable"
-  </FilesMatch>
+# Se não for arquivo nem diretório, redireciona para index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
 </IfModule>

@@ -1,9 +1,4 @@
-import type React from 'react';
-import * as HelmetAsync from 'react-helmet-async';
-
-// Use namespace import to be compatible with both ESM bundling (Vite/Rollup)
-// and Node ESM execution during SSG.
-const Helmet = (HelmetAsync as any).Helmet as React.ComponentType<React.PropsWithChildren>;
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title: string;
