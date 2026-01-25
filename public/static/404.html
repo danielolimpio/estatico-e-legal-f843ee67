@@ -10,16 +10,67 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            border: "hsl(220 13% 91%)",
+            input: "hsl(220 13% 91%)",
+            ring: "hsl(217 91% 60%)",
+            background: "hsl(0 0% 100%)",
+            foreground: "hsl(220 20% 10%)",
+            primary: {
+              DEFAULT: "hsl(217 91% 60%)",
+              foreground: "hsl(0 0% 100%)",
+            },
+            secondary: {
+              DEFAULT: "hsl(220 14% 96%)",
+              foreground: "hsl(220 20% 10%)",
+            },
+            muted: {
+              DEFAULT: "hsl(220 14% 96%)",
+              foreground: "hsl(220 10% 46%)",
+            },
+            accent: {
+              DEFAULT: "hsl(217 100% 55%)",
+              foreground: "hsl(0 0% 100%)",
+            },
+          },
+          fontFamily: {
+            display: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
+      .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400;
+      }
+      .bg-gradient-hero {
+        background: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(230 80% 50%) 100%);
+      }
+      .bg-gradient-dark {
+        background: linear-gradient(180deg, hsl(220 20% 8%) 0%, hsl(220 25% 12%) 100%);
+      }
+      .stat-card {
+        @apply relative p-6 rounded-xl bg-white border border-gray-200 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+      }
+    }
+  </style>
 </head>
-<body>
-  <div style="display: flex; min-height: 100vh; align-items: center; justify-content: center; background-color: hsl(var(--muted));">
-    <div style="text-align: center; padding: 2rem;">
-      <h1 style="font-size: 6rem; font-weight: 700; margin-bottom: 1rem; color: hsl(var(--foreground));">404</h1>
-      <p style="font-size: 1.5rem; color: hsl(var(--muted-foreground)); margin-bottom: 2rem;">Página não encontrada</p>
-      <a href="/" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--gradient-hero); color: white; border-radius: 0.75rem; font-weight: 500; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;">
+<body class="min-h-screen bg-background font-body antialiased">
+  <div class="flex min-h-screen items-center justify-center bg-muted">
+    <div class="text-center p-8">
+      <h1 class="text-9xl font-bold mb-4 text-foreground font-display">404</h1>
+      <p class="text-2xl text-muted-foreground mb-8">Página não encontrada</p>
+      <a href="/" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-medium hover:bg-primary/90 transition-all hover:-translate-y-0.5 hover:shadow-lg">
         Voltar para o Início
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
         </svg>
