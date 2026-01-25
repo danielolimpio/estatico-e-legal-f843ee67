@@ -1,18 +1,29 @@
+# Force HTTPS
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # 1. Se a URL termina sem extensão, verifica se existe .html correspondente
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME}.html -f
-  RewriteRule ^(.*)$ $1.html [L]
+  # HTTPS redirect
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 2. Fallback para SPA (apenas se nenhum .html existe)
+  # Remove trailing slashes (301 redirect)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+  # Serve .html files for URLs without extension
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+  RewriteCond %{DOCUMENT_ROOT}/static/%{REQUEST_URI}.html -f
+  RewriteRule ^(.*)$ /static/$1.html [L]
+
+  # Root to static/index.html
+  RewriteCond %{REQUEST_URI} ^/$
+  RewriteRule ^$ /static/index.html [L]
 </IfModule>
+
+# Error documents
+ErrorDocument 404 /static/404.html
 
 # Headers corretos para SEO
 <IfModule mod_mime.c>
@@ -24,7 +35,7 @@
   <FilesMatch "\.(html)$">
     Header set Cache-Control "public, max-age=3600"
   </FilesMatch>
-  <FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|woff|woff2)$">
+  <FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|webp|woff|woff2)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 </IfModule>
