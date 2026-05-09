@@ -7,9 +7,11 @@ const Header = () => {
 
   const navLinks = [
     { href: '/', label: 'Início' },
-    { href: '/sobre-nos/', label: 'Sobre Nós' },
-    { href: '/servicos/', label: 'Serviços' },
-    { href: '/contato/', label: 'Contato' },
+    { href: '/zeus-ai/', label: 'Zeus AI' },
+    { href: '/staking/', label: 'Staking' },
+    { href: '/flash-loans/', label: 'Flash Loans' },
+    { href: '/cartao-aurum/', label: 'Cartão Aurum' },
+    { href: '/exchange/', label: 'Exchange' },
   ];
 
   return (
