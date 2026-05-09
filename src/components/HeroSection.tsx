@@ -32,15 +32,15 @@ const HeroSection = () => {
 
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-up animation-delay-100">
-              A maneira mais segura de{' '}
-              <span className="text-gradient">gerenciar seus ativos</span>{' '}
-              digitais
+              <span className="text-gradient">Aurum Foundation</span>
+              <span className="block text-2xl sm:text-3xl lg:text-4xl mt-3 text-foreground">
+                Plataforma Oficial de Investimentos em Cripto com IA
+              </span>
             </h1>
 
             {/* Subheading */}
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 animate-fade-up animation-delay-200">
-              Tecnologia financeira de última geração com inteligência artificial e blockchain. 
-              Gestão patrimonial automatizada para investidores modernos.
+              A <strong>Aurum Foundation</strong> oferece um ecossistema completo de investimentos em criptomoedas com inteligência artificial e blockchain — Zeus AI Trading Bot, staking, flash loans, exchange e cartão Aurum, com segurança institucional.
             </p>
 
             {/* CTA Buttons */}
