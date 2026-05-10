@@ -85,8 +85,20 @@ const Header = () => {
               </li>
             ))}
             <li className="pt-4 flex flex-col gap-2">
-              <Button variant="outline" className="w-full">Entrar</Button>
-              <Button variant="default" className="w-full">Começar Agora</Button>
+              <Button 
+                variant="outline" 
+                className="w-full border-primary/30 text-primary hover:bg-primary/10 font-semibold"
+                onClick={() => window.open('https://backoffice.aurum.foundation/', '_blank')}
+              >
+                Entrar
+              </Button>
+              <Button 
+                variant="default" 
+                className="w-full"
+                onClick={() => window.open('https://backoffice.aurum.foundation/u/5CW428', '_blank')}
+              >
+                Começar Agora
+              </Button>
             </li>
           </ul>
         </div>
