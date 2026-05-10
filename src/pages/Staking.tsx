@@ -1,7 +1,10 @@
 import ProductPage from '@/components/ProductPage';
+import stakingHero from '@/assets/app-aurum-foundation-cartao-cripto.webp';
 
 const Staking = () => (
   <ProductPage
+    heroImage={stakingHero}
+    heroImageAlt="App Aurum Foundation - acompanhe rendimentos do Aurum Staking em tempo real"
     slug="staking"
     title="Aurum Staking | Renda Passiva em Cripto na Aurum Foundation"
     description="Aurum Staking: ganhe rendimentos passivos com criptomoedas na Aurum Foundation. Plataforma segura, transparente e com retornos competitivos."

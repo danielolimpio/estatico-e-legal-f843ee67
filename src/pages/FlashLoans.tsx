@@ -1,7 +1,10 @@
 import ProductPage from '@/components/ProductPage';
+import flashHero from '@/assets/robos-trading-cripto-aurum-foundation.webp';
 
 const FlashLoans = () => (
   <ProductPage
+    heroImage={flashHero}
+    heroImageAlt="Flash Loans Aurum Foundation - empréstimos instantâneos DeFi automatizados"
     slug="flash-loans"
     title="Flash Loans Aurum Foundation | Empréstimos Instantâneos DeFi"
     description="Flash Loans da Aurum Foundation: empréstimos instantâneos para arbitragem em DeFi, sem colateral, com execução atômica em smart contracts."

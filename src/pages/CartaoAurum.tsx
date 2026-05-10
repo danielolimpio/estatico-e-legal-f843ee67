@@ -1,7 +1,13 @@
 import ProductPage from '@/components/ProductPage';
+import cartaoNova from '@/assets/cartao-aurum-nova-visa.webp';
+import appCartao from '@/assets/aurum-neobank-app-cartao-aurum-nova.png';
 
 const CartaoAurum = () => (
   <ProductPage
+    heroImage={cartaoNova}
+    heroImageAlt="Cartão Aurum Nova Visa Business - cartão de débito cripto da Aurum Foundation"
+    secondaryImage={appCartao}
+    secondaryImageAlt="App Aurum Foundation com gestão do Cartão Aurum Nova"
     slug="cartao-aurum"
     title="Cartão Aurum | Cartão de Débito Cripto da Aurum Foundation"
     description="Cartão Aurum: use suas criptomoedas no dia a dia com o cartão de débito oficial da Aurum Foundation, aceito mundialmente."
