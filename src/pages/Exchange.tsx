@@ -1,7 +1,10 @@
 import ProductPage from '@/components/ProductPage';
+import exchangeHero from '@/assets/exchange-aurum-foundation-plataforma-trading.webp';
 
 const Exchange = () => (
   <ProductPage
+    heroImage={exchangeHero}
+    heroImageAlt="Exchange Aurum Foundation - plataforma de trading de criptomoedas com gráficos profissionais"
     slug="exchange"
     title="Exchange Aurum Foundation | Compre, Venda e Troque Cripto"
     description="Exchange Aurum Foundation: corretora oficial para comprar, vender e trocar criptomoedas com taxas competitivas, alta liquidez e segurança institucional."
