@@ -2,6 +2,7 @@ import SEOHead from '@/components/SEOHead';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import VisualShowcase from '@/components/VisualShowcase';
 import StatsSection from '@/components/StatsSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
@@ -20,6 +21,7 @@ const Index = () => {
         <Header />
         <HeroSection />
         <FeaturesSection />
+        <VisualShowcase />
         <StatsSection />
         <CTASection />
         <Footer />
