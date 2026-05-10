@@ -32,14 +32,18 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-background/10">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <a href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-lg">A</span>
-              </div>
-              <span className="font-display font-bold text-xl">AURUM</span>
+            <a href="/" className="flex items-center gap-2 mb-4" aria-label="Aurum Foundation - Início">
+              <img
+                src={aurumLogo}
+                alt="Logo Aurum Foundation - investimentos em criptomoedas com IA"
+                width={36}
+                height={36}
+                className="w-9 h-9 rounded-lg object-cover"
+              />
+              <span className="font-display font-bold text-lg">Aurum Foundation</span>
             </a>
             <p className="text-sm text-background/60 leading-relaxed">
-              Tecnologia financeira de última geração para investidores modernos.
+              Aurum Foundation: ecossistema global de investimentos em criptomoedas com inteligência artificial, blockchain e segurança institucional.
             </p>
           </div>
 
