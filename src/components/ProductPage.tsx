@@ -17,6 +17,10 @@ export interface ProductPageProps {
   features: string[];
   faqs: { q: string; a: string }[];
   ctaLabel?: string;
+  heroImage?: string;
+  heroImageAlt?: string;
+  secondaryImage?: string;
+  secondaryImageAlt?: string;
 }
 
 const CTA_URL = 'https://backoffice.aurum.foundation/u/5CW428';
@@ -33,6 +37,10 @@ const ProductPage = ({
   features,
   faqs,
   ctaLabel = 'Cadastrar na Aurum Foundation',
+  heroImage,
+  heroImageAlt,
+  secondaryImage,
+  secondaryImageAlt,
 }: ProductPageProps) => {
   const url = `https://aurumfoundation.world/${slug}/`;
   const faqLd = {
@@ -65,21 +73,34 @@ const ProductPage = ({
 
       <main className="pt-24 pb-16">
         {/* Hero */}
-        <section className="container py-12 lg:py-20">
-          <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground mb-6">
-            <a href="/" className="hover:text-primary">Aurum Foundation</a>
-            <span className="mx-2">/</span>
-            <span className="text-foreground">{h1}</span>
-          </nav>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            <span className="text-gradient">{h1}</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mb-4">{subtitle}</p>
-          <p className="text-base text-muted-foreground max-w-3xl mb-8">{intro}</p>
-          <Button variant="hero" size="xl" onClick={() => window.open(CTA_URL, '_blank')}>
-            {ctaLabel}
-            <ArrowRight className="w-5 h-5" />
-          </Button>
+        <section className="container py-12 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground mb-6">
+              <a href="/" className="hover:text-primary">Aurum Foundation</a>
+              <span className="mx-2">/</span>
+              <span className="text-foreground">{h1}</span>
+            </nav>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              <span className="text-gradient">{h1}</span>
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mb-4">{subtitle}</p>
+            <p className="text-base text-muted-foreground max-w-3xl mb-8">{intro}</p>
+            <Button variant="hero" size="xl" onClick={() => window.open(CTA_URL, '_blank')}>
+              {ctaLabel}
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+          </div>
+          {heroImage && (
+            <div className="relative">
+              <div className="absolute -inset-6 bg-gradient-to-br from-primary/20 to-transparent blur-2xl rounded-full" />
+              <img
+                src={heroImage}
+                alt={heroImageAlt || `${h1} - Aurum Foundation`}
+                className="relative w-full h-auto rounded-2xl"
+                loading="eager"
+              />
+            </div>
+          )}
         </section>
 
         {/* Content sections */}
