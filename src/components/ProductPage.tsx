@@ -138,6 +138,19 @@ const ProductPage = ({
           </aside>
         </section>
 
+        {secondaryImage && (
+          <section className="container py-8">
+            <div className="rounded-2xl overflow-hidden border border-border bg-card">
+              <img
+                src={secondaryImage}
+                alt={secondaryImageAlt || `${h1} - Aurum Foundation`}
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          </section>
+        )}
+
         {/* FAQ */}
         <section className="container py-12">
           <h2 className="text-3xl font-bold mb-8">Perguntas frequentes sobre {h1}</h2>
