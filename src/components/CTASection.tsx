@@ -48,11 +48,20 @@ const CTASection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button variant="hero" size="xl" className="group">
+            <Button
+              variant="hero"
+              size="xl"
+              className="group"
+              onClick={() => window.open('https://backoffice.aurum.foundation/u/5CW428', '_blank')}
+            >
               Criar Conta Grátis
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="outline" size="xl">
+            <Button
+              variant="outline"
+              size="xl"
+              onClick={() => window.open('https://wa.me/5512982519116', '_blank')}
+            >
               Falar com Consultor
             </Button>
           </div>

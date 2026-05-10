@@ -1,3 +1,5 @@
+import aurumLogo from '@/assets/aurum-logo.webp';
+
 const footerLinks = {
   produto: [
     { label: 'Plataforma', href: '/plataforma/' },
