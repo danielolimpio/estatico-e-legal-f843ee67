@@ -106,8 +106,8 @@
 
   <body>
     <div id="root">
-      <!-- Conteúdo SEO inicial visível para crawlers antes da hidratação do React -->
-      <header>
+      <!-- Conteúdo SEO acessível a crawlers, oculto visualmente para evitar flash antes da hidratação do React -->
+      <header style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
         <h1>Aurum Foundation — Plataforma de Investimentos em Criptomoedas com Inteligência Artificial</h1>
         <p>A <strong>Aurum Foundation</strong> é o ecossistema completo para investidores que buscam segurança institucional, automação por IA e tecnologia blockchain. Conheça os produtos oficiais da Aurum Foundation: Zeus AI Trading Bot, Aurum Staking, Flash Loans, Exchange e Cartão Aurum.</p>
       </header>
