@@ -88,13 +88,16 @@ const VisualShowcase = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative flex justify-center">
               <div className="absolute -inset-6 bg-gradient-to-br from-primary/25 via-primary/10 to-transparent blur-3xl rounded-full" />
               <img
                 src={b.image}
                 alt={b.alt}
-                className="relative w-full h-auto rounded-2xl"
+                className={`relative h-auto rounded-2xl object-contain ${
+                  b.eyebrow.startsWith('App') ? 'max-h-[460px] w-auto' : 'w-full max-h-[420px]'
+                }`}
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </article>
