@@ -63,8 +63,17 @@ const ProductPage = ({
 
   return (
     <>
-      <SEOHead title={title} description={description} canonicalUrl={url} keywords={keywords} />
+      <SEOHead
+        title={title}
+        description={description}
+        canonicalUrl={url}
+        keywords={keywords}
+        ogImage={heroImage}
+        ogImageAlt={heroImageAlt}
+        ogType="article"
+      />
       <Helmet>
+        {heroImage && <link rel="preload" as="image" href={heroImage} />}
         <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
       </Helmet>
@@ -96,8 +105,10 @@ const ProductPage = ({
               <img
                 src={heroImage}
                 alt={heroImageAlt || `${h1} - Aurum Foundation`}
-                className="relative w-full h-auto rounded-2xl"
+                className="relative w-full h-auto max-h-[420px] object-contain rounded-2xl mx-auto"
                 loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
           )}
@@ -140,12 +151,13 @@ const ProductPage = ({
 
         {secondaryImage && (
           <section className="container py-8">
-            <div className="rounded-2xl overflow-hidden border border-border bg-card">
+            <div className="rounded-2xl overflow-hidden border border-border bg-card max-w-3xl mx-auto">
               <img
                 src={secondaryImage}
                 alt={secondaryImageAlt || `${h1} - Aurum Foundation`}
-                className="w-full h-auto"
+                className="w-full h-auto max-h-[480px] object-contain"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </section>
