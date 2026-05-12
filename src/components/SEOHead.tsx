@@ -5,16 +5,31 @@ interface SEOHeadProps {
   description: string;
   canonicalUrl: string;
   ogImage?: string;
+  ogImageAlt?: string;
+  ogType?: string;
   keywords?: string;
 }
 
-const SEOHead = ({ 
-  title, 
-  description, 
-  canonicalUrl, 
+const SITE = 'https://aurumfoundation.world';
+
+const toAbsolute = (url: string) => {
+  if (!url) return `${SITE}/og-image.png`;
+  if (/^https?:\/\//i.test(url)) return url;
+  return `${SITE}${url.startsWith('/') ? '' : '/'}${url}`;
+};
+
+const SEOHead = ({
+  title,
+  description,
+  canonicalUrl,
   ogImage = '/og-image.png',
-  keywords 
+  ogImageAlt,
+  ogType = 'website',
+  keywords,
 }: SEOHeadProps) => {
+  const absoluteImage = toAbsolute(ogImage);
+  const imageAlt = ogImageAlt || title;
+
   return (
     <Helmet>
       <html lang="pt-BR" />
@@ -22,23 +37,29 @@ const SEOHead = ({
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
       {keywords && <meta name="keywords" content={keywords} />}
-      
+
       {/* Open Graph */}
+      <meta property="og:site_name" content="Aurum Foundation" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:image" content={absoluteImage} />
+      <meta property="og:image:alt" content={imageAlt} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:locale" content="pt_BR" />
-      
+
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@AurumFoundation" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
+      <meta name="twitter:image" content={absoluteImage} />
+      <meta name="twitter:image:alt" content={imageAlt} />
+
       {/* Robots */}
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     </Helmet>
   );
 };
