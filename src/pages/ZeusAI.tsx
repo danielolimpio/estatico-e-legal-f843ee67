@@ -1,13 +1,10 @@
 import ProductPage from '@/components/ProductPage';
 import zeusHero from '@/assets/zeus-ai-trading-bot-aurum-foundation.webp';
-import zeusBots from '@/assets/robos-trading-cripto-aurum-foundation.webp';
 
 const ZeusAI = () => (
   <ProductPage
     heroImage={zeusHero}
     heroImageAlt="Zeus AI Trading Bot da Aurum Foundation - inteligência artificial para trading de criptomoedas"
-    secondaryImage={zeusBots}
-    secondaryImageAlt="Robôs de trading automatizado da Aurum Foundation operando 24/7"
     slug="zeus-ai"
     title="Zeus AI Trading Bot | Aurum Foundation — Robô de Trading com IA"
     description="Zeus AI da Aurum Foundation: robô de trading automatizado com inteligência artificial que opera 24/7 em criptomoedas. Conheça o Zeus AI Bot oficial."
