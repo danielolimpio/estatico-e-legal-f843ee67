@@ -60,6 +60,28 @@ const ProductPage = ({
       { '@type': 'ListItem', position: 2, name: h1, item: url },
     ],
   };
+  const absoluteImage = heroImage
+    ? (/^https?:\/\//i.test(heroImage)
+        ? heroImage
+        : `https://aurumfoundation.world${heroImage.startsWith('/') ? '' : '/'}${heroImage}`)
+    : 'https://aurumfoundation.world/og-image.png';
+  const serviceLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: h1,
+    serviceType: h1,
+    description,
+    image: [absoluteImage],
+    url,
+    areaServed: 'Worldwide',
+    brand: { '@type': 'Brand', name: 'Aurum Foundation' },
+    provider: {
+      '@type': 'Organization',
+      name: 'Aurum Foundation',
+      url: 'https://aurumfoundation.world/',
+      logo: 'https://aurumfoundation.world/favicon.png',
+    },
+  };
 
   return (
     <>
@@ -76,6 +98,7 @@ const ProductPage = ({
         {heroImage && <link rel="preload" as="image" href={heroImage} />}
         <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(serviceLd)}</script>
       </Helmet>
 
       <Header />
