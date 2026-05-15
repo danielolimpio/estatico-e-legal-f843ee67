@@ -11,8 +11,44 @@ import Staking from "./pages/Staking";
 import FlashLoans from "./pages/FlashLoans";
 import CartaoAurum from "./pages/CartaoAurum";
 import Exchange from "./pages/Exchange";
+import Plataforma from "./pages/Plataforma";
+import Cartoes from "./pages/Cartoes";
+import Seguranca from "./pages/Seguranca";
+import SobreNos from "./pages/SobreNos";
+import Carreiras from "./pages/Carreiras";
+import Imprensa from "./pages/Imprensa";
+import Contato from "./pages/Contato";
+import Blog from "./pages/Blog";
+import Docs from "./pages/Docs";
+import FAQ from "./pages/FAQ";
+import Suporte from "./pages/Suporte";
+import Termos from "./pages/Termos";
+import Privacidade from "./pages/Privacidade";
+import Cookies from "./pages/Cookies";
 
 const queryClient = new QueryClient();
+
+const routes: Array<[string, React.ComponentType]> = [
+  ["/zeus-ai", ZeusAI],
+  ["/staking", Staking],
+  ["/flash-loans", FlashLoans],
+  ["/cartao-aurum", CartaoAurum],
+  ["/exchange", Exchange],
+  ["/plataforma", Plataforma],
+  ["/cartoes", Cartoes],
+  ["/seguranca", Seguranca],
+  ["/sobre-nos", SobreNos],
+  ["/carreiras", Carreiras],
+  ["/imprensa", Imprensa],
+  ["/contato", Contato],
+  ["/blog", Blog],
+  ["/docs", Docs],
+  ["/faq", FAQ],
+  ["/suporte", Suporte],
+  ["/termos", Termos],
+  ["/privacidade", Privacidade],
+  ["/cookies", Cookies],
+];
 
 const App = () => (
   <HelmetProvider>
@@ -23,17 +59,10 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/zeus-ai" element={<ZeusAI />} />
-            <Route path="/zeus-ai/" element={<ZeusAI />} />
-            <Route path="/staking" element={<Staking />} />
-            <Route path="/staking/" element={<Staking />} />
-            <Route path="/flash-loans" element={<FlashLoans />} />
-            <Route path="/flash-loans/" element={<FlashLoans />} />
-            <Route path="/cartao-aurum" element={<CartaoAurum />} />
-            <Route path="/cartao-aurum/" element={<CartaoAurum />} />
-            <Route path="/exchange" element={<Exchange />} />
-            <Route path="/exchange/" element={<Exchange />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            {routes.flatMap(([path, Comp]) => [
+              <Route key={path} path={path} element={<Comp />} />,
+              <Route key={path + "/"} path={path + "/"} element={<Comp />} />,
+            ])}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

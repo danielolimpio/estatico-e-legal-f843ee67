@@ -24,7 +24,7 @@ const footerLinks = {
     { label: 'Privacidade', href: '/privacidade/' },
     { label: 'Cookies', href: '/cookies/' },
   ],
-};
+} as const;
 
 const Footer = () => {
   return (
