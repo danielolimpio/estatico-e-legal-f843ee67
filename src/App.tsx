@@ -44,7 +44,7 @@ const routes: Array<[string, React.ComponentType]> = [
   ["/blog", Blog],
   ["/docs", Docs],
   ["/faq", FAQ],
-  ["/suporte", Suporte),
+  ["/suporte", Suporte],
   ["/termos", Termos],
   ["/privacidade", Privacidade],
   ["/cookies", Cookies],
