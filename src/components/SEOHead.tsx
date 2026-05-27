@@ -12,8 +12,8 @@ interface SEOHeadProps {
 
 const SITE = 'https://aurumfoundation.world';
 
-const toAbsolute = (url: string) => {
-  if (!url) return `${SITE}/og-image.png`;
+const toAbsolute = (url?: string) => {
+  if (!url) return undefined;
   if (/^https?:\/\//i.test(url)) return url;
   return `${SITE}${url.startsWith('/') ? '' : '/'}${url}`;
 };
@@ -22,7 +22,7 @@ const SEOHead = ({
   title,
   description,
   canonicalUrl,
-  ogImage = '/og-image.png',
+  ogImage,
   ogImageAlt,
   ogType = 'website',
   keywords,
@@ -44,10 +44,10 @@ const SEOHead = ({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={absoluteImage} />
-      <meta property="og:image:alt" content={imageAlt} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      {absoluteImage && <meta property="og:image" content={absoluteImage} />}
+      {absoluteImage && <meta property="og:image:alt" content={imageAlt} />}
+      {absoluteImage && <meta property="og:image:width" content="1200" />}
+      {absoluteImage && <meta property="og:image:height" content="630" />}
       <meta property="og:locale" content="pt_BR" />
 
       {/* Twitter */}
@@ -55,8 +55,8 @@ const SEOHead = ({
       <meta name="twitter:site" content="@AurumFoundation" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={absoluteImage} />
-      <meta name="twitter:image:alt" content={imageAlt} />
+      {absoluteImage && <meta name="twitter:image" content={absoluteImage} />}
+      {absoluteImage && <meta name="twitter:image:alt" content={imageAlt} />}
 
       {/* Robots */}
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
