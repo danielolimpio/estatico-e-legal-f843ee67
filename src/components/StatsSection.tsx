@@ -27,7 +27,7 @@ const StatsSection = () => {
               <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gradient mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm sm:text-base text-primary-foreground/70 font-medium">
+              <div className="text-sm sm:text-base text-primary-foreground/90 font-medium">
                 {stat.label}
               </div>
             </div>
