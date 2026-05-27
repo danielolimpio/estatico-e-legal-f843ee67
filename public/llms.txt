@@ -1,0 +1,36 @@
+# Aurum Foundation
+
+> Ecossistema financeiro cripto da Aurum Foundation: exchange, cartões, staking, flash loans, robôs de trading e IA Zeus. Conteúdo em português (pt-BR).
+
+A Aurum Foundation oferece uma plataforma completa de serviços financeiros digitais baseados em criptomoedas, incluindo trading, cartões cripto Visa, staking, empréstimos flash e automação com inteligência artificial.
+
+## Produtos
+
+- [Exchange Aurum](/exchange): Plataforma de trading de criptomoedas com liquidez global.
+- [Cartão Aurum](/cartao-aurum): Cartão cripto Visa para uso no dia a dia.
+- [Cartões Aurum](/cartoes): Linha completa de cartões Nova, World e Elite.
+- [Staking](/staking): Rendimento passivo em ativos digitais.
+- [Flash Loans](/flash-loans): Empréstimos instantâneos on-chain sem garantia.
+- [Zeus AI](/zeus-ai): Robôs de trading com inteligência artificial.
+- [Plataforma Aurum](/plataforma): Visão geral do ecossistema Aurum.
+
+## Institucional
+
+- [Sobre Nós](/sobre-nos): Quem somos, missão e liderança da Aurum Foundation.
+- [Segurança](/seguranca): Práticas de segurança, custódia e compliance.
+- [Carreiras](/carreiras): Oportunidades de trabalho na Aurum.
+- [Imprensa](/imprensa): Materiais e contatos para mídia.
+- [Contato](/contato): Canais oficiais de atendimento.
+- [Blog](/blog): Artigos sobre cripto, finanças e tecnologia.
+
+## Suporte
+
+- [Documentação](/docs): Documentação técnica e guias.
+- [FAQ](/faq): Perguntas frequentes sobre produtos e serviços.
+- [Suporte](/suporte): Central de ajuda e atendimento.
+
+## Optional
+
+- [Termos de Uso](/termos): Termos e condições de uso da plataforma.
+- [Política de Privacidade](/privacidade): Como tratamos dados pessoais.
+- [Política de Cookies](/cookies): Uso de cookies no site.
