@@ -12,8 +12,8 @@ interface SEOHeadProps {
 
 const SITE = 'https://aurumfoundation.world';
 
-const toAbsolute = (url: string) => {
-  if (!url) return `${SITE}/og-image.png`;
+const toAbsolute = (url?: string) => {
+  if (!url) return undefined;
   if (/^https?:\/\//i.test(url)) return url;
   return `${SITE}${url.startsWith('/') ? '' : '/'}${url}`;
 };
@@ -22,7 +22,7 @@ const SEOHead = ({
   title,
   description,
   canonicalUrl,
-  ogImage = '/og-image.png',
+  ogImage,
   ogImageAlt,
   ogType = 'website',
   keywords,
