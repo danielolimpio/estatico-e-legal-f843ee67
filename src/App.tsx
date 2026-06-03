@@ -30,6 +30,7 @@ import Aurum from "./pages/Aurum";
 const queryClient = new QueryClient();
 
 const routes: Array<[string, React.ComponentType]> = [
+  ["/aurum", Aurum],
   ["/zeus-ai", ZeusAI],
   ["/staking", Staking],
   ["/flash-loans", FlashLoans],
