@@ -50,6 +50,12 @@ const SobreNos = () => (
       { q: 'Quem fundou a Aurum?', a: 'A Aurum foi fundada por uma equipe sênior de Web3, finanças e blockchain, liderada por Bryan Benson, Ahmad Zen e Drei Menza.' },
       { q: 'A Aurum é regulada?', a: 'Sim, opera sob 3 licenças internacionais com KYC, AML e auditorias contínuas.' },
     ]}
+    relatedLinks={[
+      { href: '/aurum/', label: 'Aurum — o ecossistema completo', description: 'Visão geral da marca Aurum e de todos os produtos da Aurum Foundation.' },
+      { href: '/zeus-ai/', label: 'Zeus AI', description: 'Robô de trading cripto com inteligência artificial proprietária.' },
+      { href: '/exchange/', label: 'Aurum Exchange', description: 'Corretora cripto integrada ao ecossistema Aurum.' },
+      { href: '/cartao-aurum/', label: 'Cartão Aurum', description: 'Cartão cripto para gastar saldo em moeda real.' },
+    ]}
   />
 );
 

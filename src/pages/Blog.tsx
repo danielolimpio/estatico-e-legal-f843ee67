@@ -44,6 +44,11 @@ const Blog = () => (
       { q: 'Posso republicar os artigos?', a: 'Sim, mediante crédito explícito e link canônico para o post original do blog Aurum Foundation.' },
       { q: 'Como sugerir uma pauta?', a: 'Envie sua sugestão pelos canais oficiais listados na página de Contato.' },
     ]}
+    relatedLinks={[
+      { href: '/aurum/', label: 'Aurum — ecossistema cripto', description: 'Conheça a marca Aurum e todos os produtos da Aurum Foundation reunidos em uma página.' },
+      { href: '/sobre-nos/', label: 'Sobre a Aurum Foundation', description: 'Missão, liderança global e reconhecimentos da Aurum Foundation.' },
+      { href: '/zeus-ai/', label: 'Zeus AI', description: 'Como funciona o robô de trading com IA da Aurum.' },
+    ]}
   />
 );
 

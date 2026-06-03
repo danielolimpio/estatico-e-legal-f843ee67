@@ -21,6 +21,7 @@ export interface ProductPageProps {
   heroImageAlt?: string;
   secondaryImage?: string;
   secondaryImageAlt?: string;
+  relatedLinks?: { href: string; label: string; description?: string }[];
 }
 
 const CTA_URL = 'https://backoffice.aurum.foundation/u/5CW428';
@@ -41,6 +42,7 @@ const ProductPage = ({
   heroImageAlt,
   secondaryImage,
   secondaryImageAlt,
+  relatedLinks,
 }: ProductPageProps) => {
   const url = `https://aurumfoundation.world/${slug}/`;
   const faqLd = {
@@ -198,6 +200,20 @@ const ProductPage = ({
             ))}
           </div>
         </section>
+
+        {relatedLinks && relatedLinks.length > 0 && (
+          <section className="container py-12" aria-labelledby="related-links-heading">
+            <h2 id="related-links-heading" className="text-3xl font-bold mb-6">Conteúdos relacionados</h2>
+            <ul className="grid sm:grid-cols-2 gap-4">
+              {relatedLinks.map((l, i) => (
+                <li key={i} className="rounded-xl border border-border bg-card p-5">
+                  <a href={l.href} className="text-lg font-semibold text-primary hover:underline">{l.label}</a>
+                  {l.description && <p className="mt-2 text-sm text-muted-foreground">{l.description}</p>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </main>
 
       <Footer />
