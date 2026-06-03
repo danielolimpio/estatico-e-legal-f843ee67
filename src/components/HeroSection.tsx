@@ -39,8 +39,11 @@ const HeroSection = () => {
             </h1>
 
             {/* Subheading */}
-            <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 animate-fade-up animation-delay-200">
+            <p className="text-lg sm:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto lg:mx-0 animate-fade-up animation-delay-200">
               A <strong>Aurum Foundation</strong> oferece um ecossistema completo de investimentos em criptomoedas com inteligência artificial e blockchain — Zeus AI Trading Bot, staking, flash loans, exchange e cartão Aurum, com segurança institucional.
+            </p>
+            <p className="text-base text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 animate-fade-up animation-delay-200">
+              Saiba mais sobre o ecossistema <a href="/aurum/" className="text-primary hover:underline font-semibold">Aurum</a> e conheça todos os produtos da marca <a href="/aurum/" className="text-primary hover:underline font-semibold">Aurum Foundation</a> em um só lugar.
             </p>
 
             {/* CTA Buttons */}
