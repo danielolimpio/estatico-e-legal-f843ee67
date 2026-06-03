@@ -2,6 +2,7 @@ import aurumLogo from '@/assets/aurum-logo.webp';
 
 const footerLinks = {
   produto: [
+    { label: 'Aurum', href: '/aurum/' },
     { label: 'Plataforma', href: '/plataforma/' },
     { label: 'Cartões', href: '/cartoes/' },
     { label: 'Exchange', href: '/exchange/' },
