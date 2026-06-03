@@ -25,6 +25,7 @@ import Suporte from "./pages/Suporte";
 import Termos from "./pages/Termos";
 import Privacidade from "./pages/Privacidade";
 import Cookies from "./pages/Cookies";
+import Aurum from "./pages/Aurum";
 
 const queryClient = new QueryClient();
 
