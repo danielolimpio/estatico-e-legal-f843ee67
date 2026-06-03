@@ -25,10 +25,12 @@ import Suporte from "./pages/Suporte";
 import Termos from "./pages/Termos";
 import Privacidade from "./pages/Privacidade";
 import Cookies from "./pages/Cookies";
+import Aurum from "./pages/Aurum";
 
 const queryClient = new QueryClient();
 
 const routes: Array<[string, React.ComponentType]> = [
+  ["/aurum", Aurum],
   ["/zeus-ai", ZeusAI],
   ["/staking", Staking],
   ["/flash-loans", FlashLoans],

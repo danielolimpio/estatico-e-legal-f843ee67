@@ -8,6 +8,7 @@ const Header = () => {
 
   const navLinks = [
     { href: '/', label: 'Início' },
+    { href: '/aurum/', label: 'Aurum' },
     { href: '/zeus-ai/', label: 'Zeus AI' },
     { href: '/staking/', label: 'Staking' },
     { href: '/flash-loans/', label: 'Flash Loans' },
