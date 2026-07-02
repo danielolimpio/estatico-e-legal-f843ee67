@@ -93,6 +93,8 @@ const VisualShowcase = () => {
               <img
                 src={b.image}
                 alt={b.alt}
+                width={1200}
+                height={800}
                 className={`relative h-auto rounded-2xl object-contain ${
                   b.eyebrow.startsWith('App') ? 'max-h-[460px] w-auto' : 'w-full max-h-[420px]'
                 }`}
@@ -100,6 +102,7 @@ const VisualShowcase = () => {
                 decoding="async"
               />
             </div>
+
           </article>
         ))}
       </div>

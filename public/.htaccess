@@ -16,8 +16,10 @@
   RewriteCond %{REQUEST_URI} !(/$|\.)
   RewriteRule (.*) /$1/ [R=301,L]
 
-  # Redirect legacy URL to canonical cookies page
+  # Redirects for legacy URLs reported by Google Search Console
   RewriteRule ^politica-de-cookies/?$ /cookies/ [R=301,L]
+  RewriteRule ^servicos/?$ /aurum/ [R=301,L]
+  RewriteRule ^services/?$ /aurum/ [R=301,L]
 
   # SPA fallback
   RewriteRule ^index\.html$ - [L]

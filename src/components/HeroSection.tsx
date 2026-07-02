@@ -102,11 +102,23 @@ const HeroSection = () => {
                       >
                         {/* Thumbnail */}
                         <img
-                          src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-                          alt="Thumbnail do vídeo"
+                          src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+                          alt="Aurum Foundation — vídeo institucional sobre investimentos em cripto com IA"
+                          width={1280}
+                          height={720}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           loading="lazy"
+                          decoding="async"
+                          onError={(e) => {
+                            const img = e.currentTarget;
+                            if (img.src.includes('hqdefault')) {
+                              img.src = `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`;
+                            } else if (img.src.includes('mqdefault')) {
+                              img.src = `https://i.ytimg.com/vi/${videoId}/default.jpg`;
+                            }
+                          }}
                         />
+
                         {/* Play Button Overlay */}
                         <div className="absolute inset-0 bg-background/30 flex items-center justify-center transition-all duration-300 group-hover:bg-background/10">
                           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-primary/50 group-hover:shadow-2xl">
