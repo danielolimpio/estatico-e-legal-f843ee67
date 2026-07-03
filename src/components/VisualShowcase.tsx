@@ -1,9 +1,10 @@
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
-import zeusAi from '@/assets/zeus-ai-trading-bot-aurum-foundation.webp';
-import exchange from '@/assets/exchange-aurum-foundation-plataforma-trading.webp';
-import cards from '@/assets/cartao-aurum-cripto-debito.webp';
-import phone from '@/assets/aurum-neobank-app-cartao-aurum-nova.png';
+import Picture, { type PictureSource } from './Picture';
+import zeusAi from '@/assets/zeus-ai-trading-bot-aurum-foundation.webp?picture';
+import exchange from '@/assets/exchange-aurum-foundation-plataforma-trading.webp?picture';
+import cards from '@/assets/cartao-aurum-cripto-debito.webp?picture';
+import phone from '@/assets/aurum-neobank-app-cartao-aurum-nova.png?picture';
 
 const CTA = 'https://backoffice.aurum.foundation/u/5CW428';
 
@@ -12,7 +13,7 @@ interface Block {
   title: string;
   text: string;
   href: string;
-  image: string;
+  image: PictureSource;
   alt: string;
   reverse?: boolean;
 }
@@ -23,7 +24,7 @@ const blocks: Block[] = [
     title: 'Inteligência artificial operando 24/7 em criptomoedas',
     text: 'O Zeus AI da Aurum Foundation analisa milhões de pontos de dados e executa estratégias automatizadas de trading com baixa latência, machine learning e gestão de risco institucional.',
     href: '/zeus-ai/',
-    image: zeusAi,
+    image: zeusAi as PictureSource,
     alt: 'Zeus AI Trading Bot da Aurum Foundation - inteligência artificial para investimento em criptomoedas',
   },
   {
@@ -31,7 +32,7 @@ const blocks: Block[] = [
     title: 'Plataforma de trading profissional para cripto',
     text: 'Compre, venda e troque criptomoedas com alta liquidez, gráficos avançados e taxas competitivas na exchange oficial da Aurum Foundation.',
     href: '/exchange/',
-    image: exchange,
+    image: exchange as PictureSource,
     alt: 'Exchange Aurum Foundation - plataforma profissional de trading de criptomoedas',
     reverse: true,
   },
@@ -40,7 +41,7 @@ const blocks: Block[] = [
     title: 'Use suas criptomoedas no mundo real',
     text: 'O Cartão Aurum Visa transforma seus ativos digitais em poder de compra global, com cashback em tokens Aurum e gestão completa pelo app da Aurum Foundation.',
     href: '/cartao-aurum/',
-    image: cards,
+    image: cards as PictureSource,
     alt: 'Cartão Aurum Infinity e Aurum Nova - cartões de débito cripto da Aurum Foundation',
   },
   {
@@ -48,7 +49,7 @@ const blocks: Block[] = [
     title: 'Todo o ecossistema cripto na palma da sua mão',
     text: 'Acompanhe staking, trading, cartões e flash loans em um único aplicativo. A Aurum Foundation entrega uma experiência mobile premium para investidores.',
     href: '/staking/',
-    image: phone,
+    image: phone as PictureSource,
     alt: 'Aplicativo Aurum Foundation - gestão de cartão Aurum Nova e investimentos em criptomoedas',
     reverse: true,
   },
@@ -90,19 +91,15 @@ const VisualShowcase = () => {
             </div>
             <div className="relative flex justify-center">
               <div className="absolute -inset-6 bg-gradient-to-br from-primary/25 via-primary/10 to-transparent blur-3xl rounded-full" />
-              <img
-                src={b.image}
+              <Picture
+                source={b.image}
                 alt={b.alt}
-                width={1200}
-                height={800}
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className={`relative h-auto rounded-2xl object-contain ${
                   b.eyebrow.startsWith('App') ? 'max-h-[460px] w-auto' : 'w-full max-h-[420px]'
                 }`}
-                loading="lazy"
-                decoding="async"
               />
             </div>
-
           </article>
         ))}
       </div>
